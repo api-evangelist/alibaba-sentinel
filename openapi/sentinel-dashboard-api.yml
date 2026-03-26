@@ -1,0 +1,276 @@
+openapi: 3.0.3
+info:
+  title: Alibaba Sentinel Dashboard API
+  description: >-
+    REST API for the Sentinel Dashboard providing management of flow rules,
+    degrade rules, system rules, and authority rules for resources.
+  version: 1.8.0
+  contact:
+    name: Alibaba Sentinel
+    url: https://github.com/alibaba/Sentinel
+servers:
+  - url: http://localhost:8080
+    description: Default Sentinel Dashboard
+paths:
+  /v1/flow/rules:
+    get:
+      operationId: getFlowRules
+      summary: Get flow rules for an application
+      tags:
+        - Flow Rules
+      parameters:
+        - name: app
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Application name
+      responses:
+        '200':
+          description: List of flow rules
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+  /v1/flow/rule:
+    post:
+      operationId: createFlowRule
+      summary: Create a new flow rule
+      tags:
+        - Flow Rules
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/FlowRuleRequest'
+      responses:
+        '200':
+          description: Flow rule created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+    put:
+      operationId: updateFlowRule
+      summary: Update an existing flow rule
+      tags:
+        - Flow Rules
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/FlowRuleRequest'
+      responses:
+        '200':
+          description: Flow rule updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+    delete:
+      operationId: deleteFlowRule
+      summary: Delete a flow rule
+      tags:
+        - Flow Rules
+      parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: integer
+        - name: app
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Flow rule deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+  /v1/degrade/rules:
+    get:
+      operationId: getDegradeRules
+      summary: Get degrade (circuit breaker) rules
+      tags:
+        - Degrade Rules
+      parameters:
+        - name: app
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of degrade rules
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+  /v1/degrade/rule:
+    post:
+      operationId: createDegradeRule
+      summary: Create a degrade rule
+      tags:
+        - Degrade Rules
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DegradeRuleRequest'
+      responses:
+        '200':
+          description: Degrade rule created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+    delete:
+      operationId: deleteDegradeRule
+      summary: Delete a degrade rule
+      tags:
+        - Degrade Rules
+      parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: integer
+        - name: app
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Degrade rule deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+  /v1/system/rules:
+    get:
+      operationId: getSystemRules
+      summary: Get system protection rules
+      tags:
+        - System Rules
+      parameters:
+        - name: app
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of system rules
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+  /v1/authority/rules:
+    get:
+      operationId: getAuthorityRules
+      summary: Get authority rules
+      tags:
+        - Authority Rules
+      parameters:
+        - name: app
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of authority rules
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+components:
+  schemas:
+    ApiResult:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: Response code (200 for success)
+        msg:
+          type: string
+          description: Response message
+        data:
+          description: Response data payload
+    FlowRuleRequest:
+      type: object
+      required:
+        - app
+        - resource
+        - count
+      properties:
+        id:
+          type: integer
+        app:
+          type: string
+        resource:
+          type: string
+        limitApp:
+          type: string
+          default: default
+        grade:
+          type: integer
+          enum: [0, 1]
+          default: 1
+        count:
+          type: number
+        strategy:
+          type: integer
+          enum: [0, 1, 2]
+          default: 0
+        refResource:
+          type: string
+        controlBehavior:
+          type: integer
+          enum: [0, 1, 2, 3]
+          default: 0
+        warmUpPeriodSec:
+          type: integer
+        maxQueueingTimeMs:
+          type: integer
+        clusterMode:
+          type: boolean
+          default: false
+    DegradeRuleRequest:
+      type: object
+      required:
+        - app
+        - resource
+        - count
+        - grade
+        - timeWindow
+      properties:
+        id:
+          type: integer
+        app:
+          type: string
+        resource:
+          type: string
+        limitApp:
+          type: string
+          default: default
+        grade:
+          type: integer
+          enum: [0, 1, 2]
+        count:
+          type: number
+        timeWindow:
+          type: integer
+        minRequestAmount:
+          type: integer
+          default: 5
+        statIntervalMs:
+          type: integer
+          default: 1000

@@ -39,7 +39,16 @@ apis:
       - Traffic Shaping
       - Alibaba
       - Java
-    properties: []
+    properties:
+      - type: OpenAPI
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/openapi/sentinel-dashboard-api.yml
+      - type: JSONSchema
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/flow-rule.json
+      - type: JSONSchema
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/degrade-rule.json
 common:
   - type: Website
     url: https://sentinelguard.io/

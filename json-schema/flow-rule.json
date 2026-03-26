@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/alibaba-sentinel/json-schema/flow-rule.json",
+  "title": "Alibaba Sentinel Flow Rule",
+  "description": "JSON Schema for Sentinel flow control rules used by the Dashboard API and configuration.",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/FlowRule"
+  },
+  "$defs": {
+    "FlowRule": {
+      "type": "object",
+      "required": ["resource", "count"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "Unique identifier of the rule."
+        },
+        "resource": {
+          "type": "string",
+          "description": "Resource name to apply the flow rule to."
+        },
+        "limitApp": {
+          "type": "string",
+          "default": "default",
+          "description": "Calling application to apply the rule to."
+        },
+        "grade": {
+          "type": "integer",
+          "enum": [0, 1],
+          "default": 1,
+          "description": "Threshold type: 0 = thread count, 1 = QPS."
+        },
+        "count": {
+          "type": "number",
+          "description": "Threshold count value."
+        },
+        "strategy": {
+          "type": "integer",
+          "enum": [0, 1, 2],
+          "default": 0,
+          "description": "Flow control strategy: 0 = direct, 1 = relate, 2 = chain."
+        },
+        "refResource": {
+          "type": "string",
+          "description": "Reference resource for relate/chain strategy."
+        },
+        "controlBehavior": {
+          "type": "integer",
+          "enum": [0, 1, 2, 3],
+          "default": 0,
+          "description": "Control behavior: 0 = reject directly, 1 = warm up, 2 = rate limiter, 3 = warm up + rate limiter."
+        },
+        "warmUpPeriodSec": {
+          "type": "integer",
+          "description": "Warm-up period in seconds for warm up behavior."
+        },
+        "maxQueueingTimeMs": {
+          "type": "integer",
+          "description": "Maximum queuing time in milliseconds for rate limiter behavior."
+        },
+        "clusterMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether the rule is for cluster flow control."
+        },
+        "clusterConfig": {
+          "type": "object",
+          "properties": {
+            "flowId": {
+              "type": "integer",
+              "description": "Cluster flow ID."
+            },
+            "thresholdType": {
+              "type": "integer",
+              "enum": [0, 1],
+              "description": "0 = average by local, 1 = global threshold."
+            },
+            "fallbackToLocalWhenFail": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether to fall back to local flow control on failure."
+            }
+          }
+        }
+      }
+    }
+  }
+}
