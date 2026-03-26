@@ -1,11 +1,21 @@
 aid: alibaba-sentinel
 name: Alibaba Sentinel
 description: >-
-  Alibaba Sentinel is a flow control component for microservices providing flow control, circuit breaking, and system adaptive protection.
+  Alibaba Sentinel is a powerful flow control component enabling reliability,
+  resilience, and monitoring for microservices, providing flow control, traffic
+  shaping, concurrency limiting, circuit breaking, and system adaptive overload
+  protection.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - Flow Control
+  - Circuit Breaker
+  - Rate Limiting
   - Microservices
+  - Resilience
+  - Traffic Shaping
+  - Alibaba
+  - Java
 url: >-
   https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/apis.yml
 created: '2026-03-26'
@@ -15,14 +25,38 @@ apis:
   - aid: alibaba-sentinel:alibaba-sentinel
     name: Alibaba Sentinel
     description: >-
-      Alibaba Sentinel is a flow control component for microservices providing flow control, circuit breaking, and system adaptive protection.
-    humanURL: https://github.com/api-evangelist/alibaba-sentinel
+      Alibaba Sentinel is a powerful flow control component enabling reliability,
+      resilience, and monitoring for microservices, providing flow control,
+      traffic shaping, concurrency limiting, circuit breaking, and system
+      adaptive overload protection.
+    humanURL: https://sentinelguard.io/
     tags:
+      - Flow Control
+      - Circuit Breaker
+      - Rate Limiting
       - Microservices
+      - Resilience
+      - Traffic Shaping
+      - Alibaba
+      - Java
     properties: []
 common:
   - type: Website
-    url: https://github.com/api-evangelist/alibaba-sentinel
+    url: https://sentinelguard.io/
+  - type: Documentation
+    url: https://sentinelguard.io/en-us/docs/introduction.html
+  - type: Getting Started
+    url: https://github.com/alibaba/Sentinel/wiki/How-to-Use
+  - type: GitHub
+    url: https://github.com/alibaba/Sentinel
+  - type: GitHub Org
+    url: https://github.com/alibaba
+  - type: Wiki
+    url: https://github.com/alibaba/Sentinel/wiki
+  - type: Issues
+    url: https://github.com/alibaba/Sentinel/issues
+  - type: Releases
+    url: https://github.com/alibaba/Sentinel/releases
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
