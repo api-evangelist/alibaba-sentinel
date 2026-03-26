@@ -1,0 +1,28 @@
+aid: alibaba-sentinel
+name: Alibaba Sentinel
+description: >-
+  Alibaba Sentinel is a flow control component for microservices providing flow control, circuit breaking, and system adaptive protection.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Microservices
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/apis.yml
+created: '2026-03-26'
+modified: '2026-03-26'
+specificationVersion: '0.19'
+apis:
+  - aid: alibaba-sentinel:alibaba-sentinel
+    name: Alibaba Sentinel
+    description: >-
+      Alibaba Sentinel is a flow control component for microservices providing flow control, circuit breaking, and system adaptive protection.
+    humanURL: https://github.com/api-evangelist/alibaba-sentinel
+    tags:
+      - Microservices
+    properties: []
+common:
+  - type: Website
+    url: https://github.com/api-evangelist/alibaba-sentinel
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
