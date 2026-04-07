@@ -8,14 +8,14 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Flow Control
+  - Alibaba
   - Circuit Breaker
-  - Rate Limiting
+  - Flow Control
+  - Java
   - Microservices
+  - Rate Limiting
   - Resilience
   - Traffic Shaping
-  - Alibaba
-  - Java
 url: >-
   https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/apis.yml
 created: '2026-03-26'
@@ -31,14 +31,14 @@ apis:
       adaptive overload protection.
     humanURL: https://sentinelguard.io/
     tags:
-      - Flow Control
+      - Alibaba
       - Circuit Breaker
-      - Rate Limiting
+      - Flow Control
+      - Java
       - Microservices
+      - Rate Limiting
       - Resilience
       - Traffic Shaping
-      - Alibaba
-      - Java
     properties:
       - type: OpenAPI
         url: >-
