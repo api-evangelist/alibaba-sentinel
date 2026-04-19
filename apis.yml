@@ -1,10 +1,17 @@
 aid: alibaba-sentinel
 name: Alibaba Sentinel
 description: >-
-  Alibaba Sentinel is a powerful flow control component enabling reliability,
-  resilience, and monitoring for microservices, providing flow control, traffic
-  shaping, concurrency limiting, circuit breaking, and system adaptive overload
-  protection.
+  Alibaba Sentinel is a powerful open source flow control component enabling
+  reliability, resilience, and monitoring for microservices. Originally
+  developed by Alibaba and used in production at Alibaba for over 10 years,
+  Sentinel provides flow control, traffic shaping, concurrency limiting, circuit
+  breaking, and system adaptive overload protection. The project is written
+  primarily in Java with a Go implementation (sentinel-golang) also available.
+  Sentinel integrates with major frameworks including Spring Cloud, Dubbo,
+  gRPC, Apache RocketMQ, and Servlet. It provides a real-time monitoring
+  dashboard for visualizing metrics and configuring rules dynamically. The
+  project is hosted on GitHub under the Alibaba organization and is widely
+  adopted in cloud-native microservice architectures.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -16,30 +23,35 @@ tags:
   - Rate Limiting
   - Resilience
   - Traffic Shaping
+  - Open Source
+  - Cloud Native
+  - Spring Cloud
 url: >-
   https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/apis.yml
 created: '2026-03-26'
-modified: '2026-03-26'
+modified: '2026-04-19'
 specificationVersion: '0.19'
 apis:
-  - aid: alibaba-sentinel:alibaba-sentinel
-    name: Alibaba Sentinel
+  - aid: alibaba-sentinel:sentinel-dashboard-api
+    name: Sentinel Dashboard API
     description: >-
-      Alibaba Sentinel is a powerful flow control component enabling reliability,
-      resilience, and monitoring for microservices, providing flow control,
-      traffic shaping, concurrency limiting, circuit breaking, and system
-      adaptive overload protection.
-    humanURL: https://sentinelguard.io/
+      The Sentinel Dashboard API provides a REST interface for the Sentinel
+      dashboard application, which allows real-time monitoring of clients and
+      dynamic configuration of flow control, circuit breaking, and system
+      protection rules. The dashboard supports cluster aggregation of runtime
+      info for up to 500 nodes and enables operators to manage resources and
+      rules without application restarts.
+    humanURL: https://sentinelguard.io/en-us/docs/dashboard.html
+    baseURL: https://localhost:8080
     tags:
-      - Alibaba
-      - Circuit Breaker
+      - Dashboard
+      - Monitoring
       - Flow Control
-      - Java
-      - Microservices
+      - Circuit Breaker
       - Rate Limiting
-      - Resilience
-      - Traffic Shaping
     properties:
+      - type: Documentation
+        url: https://sentinelguard.io/en-us/docs/dashboard.html
       - type: OpenAPI
         url: >-
           https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/openapi/sentinel-dashboard-api.yml
@@ -54,11 +66,13 @@ common:
     url: https://sentinelguard.io/
   - type: Documentation
     url: https://sentinelguard.io/en-us/docs/introduction.html
-  - type: Getting Started
+  - type: GettingStarted
     url: https://github.com/alibaba/Sentinel/wiki/How-to-Use
   - type: GitHub
     url: https://github.com/alibaba/Sentinel
-  - type: GitHub Org
+  - type: GitHub
+    url: https://github.com/alibaba/sentinel-golang
+  - type: GitHub
     url: https://github.com/alibaba
   - type: Wiki
     url: https://github.com/alibaba/Sentinel/wiki
