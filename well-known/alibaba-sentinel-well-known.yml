@@ -1,0 +1,21 @@
+generated: '2026-06-20'
+method: searched
+source: https://sentinelguard.io/
+notes: >-
+  The only public base host is the project marketing/docs site sentinelguard.io.
+  The API baseURL (localhost:8080) is a self-hosted dashboard and is not
+  probeable. No /.well-known/ discovery documents are published on
+  sentinelguard.io; all probes returned 404 (expected for a self-hosted
+  open-source dashboard).
+host: https://sentinelguard.io
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

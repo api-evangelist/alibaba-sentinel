@@ -29,7 +29,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/apis.yml
 created: '2026-03-26'
-modified: '2026-04-19'
+modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
   - aid: alibaba-sentinel:sentinel-dashboard-api
@@ -61,7 +61,23 @@ apis:
       - type: JSONSchema
         url: >-
           https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/degrade-rule.json
+      - type: MCPServer
+        url: mcp/alibaba-sentinel-mcp.yml
+      - type: Overlay
+        url: overlays/alibaba-sentinel-sentinel-dashboard-api-overlay.yaml
+      - type: Conformance
+        url: conformance/alibaba-sentinel-conformance.yml
+      - type: ErrorCatalog
+        url: errors/alibaba-sentinel-problem-types.yml
+      - type: Lifecycle
+        url: lifecycle/alibaba-sentinel-lifecycle.yml
 common:
+  - type: Packages
+    url: packages/alibaba-sentinel-packages.yml
+  - type: WellKnown
+    url: well-known/alibaba-sentinel-well-known.yml
+  - type: LLMsTxt
+    url: llms/alibaba-sentinel-llms.txt
   - type: Website
     url: https://sentinelguard.io/
   - type: Documentation

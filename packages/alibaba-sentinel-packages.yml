@@ -1,0 +1,74 @@
+generated: '2026-06-20'
+method: searched
+source: https://search.maven.org/search?q=g:com.alibaba.csp
+notes: >-
+  Sentinel is an open-source project. Java artifacts are published first-party
+  to Maven Central under the com.alibaba.csp group. The Go implementation is
+  published as a Go module. There is no JavaScript/npm, PyPI, or NuGet client
+  library (the dashboard REST API is consumed directly over HTTP). Versions
+  reflect the latest published on each registry at search time (1.8.8 is the
+  latest stable line; 2.0.0-alpha is the current pre-release core line).
+packages:
+  - language: java
+    registry: maven-central
+    name: com.alibaba.csp:sentinel-core
+    url: https://central.sonatype.com/artifact/com.alibaba.csp/sentinel-core
+    install: <dependency><groupId>com.alibaba.csp</groupId><artifactId>sentinel-core</artifactId><version>1.8.8</version></dependency>
+    latest: 2.0.0-alpha
+    official: true
+  - language: java
+    registry: maven-central
+    name: com.alibaba.csp:sentinel-transport-simple-http
+    url: https://central.sonatype.com/artifact/com.alibaba.csp/sentinel-transport-simple-http
+    install: <dependency><groupId>com.alibaba.csp</groupId><artifactId>sentinel-transport-simple-http</artifactId><version>1.8.8</version></dependency>
+    latest: 2.0.0-alpha
+    official: true
+  - language: java
+    registry: maven-central
+    name: com.alibaba.csp:sentinel-datasource-nacos
+    url: https://central.sonatype.com/artifact/com.alibaba.csp/sentinel-datasource-nacos
+    install: <dependency><groupId>com.alibaba.csp</groupId><artifactId>sentinel-datasource-nacos</artifactId><version>1.8.8</version></dependency>
+    latest: 2.0.0-alpha
+    official: true
+  - language: java
+    registry: maven-central
+    name: com.alibaba.csp:sentinel-datasource-redis
+    url: https://central.sonatype.com/artifact/com.alibaba.csp/sentinel-datasource-redis
+    install: <dependency><groupId>com.alibaba.csp</groupId><artifactId>sentinel-datasource-redis</artifactId><version>1.8.8</version></dependency>
+    latest: 2.0.0-alpha
+    official: true
+  - language: java
+    registry: maven-central
+    name: com.alibaba.csp:sentinel-cluster-server-default
+    url: https://central.sonatype.com/artifact/com.alibaba.csp/sentinel-cluster-server-default
+    install: <dependency><groupId>com.alibaba.csp</groupId><artifactId>sentinel-cluster-server-default</artifactId><version>1.8.8</version></dependency>
+    latest: 2.0.0-alpha
+    official: true
+  - language: java
+    registry: maven-central
+    name: com.alibaba.csp:sentinel-spring-webmvc-adapter
+    url: https://central.sonatype.com/artifact/com.alibaba.csp/sentinel-spring-webmvc-adapter
+    install: <dependency><groupId>com.alibaba.csp</groupId><artifactId>sentinel-spring-webmvc-adapter</artifactId><version>1.8.8</version></dependency>
+    latest: 1.8.8
+    official: true
+  - language: java
+    registry: maven-central
+    name: com.alibaba.csp:sentinel-dubbo-adapter
+    url: https://central.sonatype.com/artifact/com.alibaba.csp/sentinel-dubbo-adapter
+    install: <dependency><groupId>com.alibaba.csp</groupId><artifactId>sentinel-dubbo-adapter</artifactId><version>1.8.8</version></dependency>
+    latest: 1.8.8
+    official: true
+  - language: java
+    registry: maven-central
+    name: com.alibaba.csp:sentinel-grpc-adapter
+    url: https://central.sonatype.com/artifact/com.alibaba.csp/sentinel-grpc-adapter
+    install: <dependency><groupId>com.alibaba.csp</groupId><artifactId>sentinel-grpc-adapter</artifactId><version>1.8.8</version></dependency>
+    latest: 1.8.8
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/alibaba/sentinel-golang
+    url: https://pkg.go.dev/github.com/alibaba/sentinel-golang
+    install: go get github.com/alibaba/sentinel-golang
+    latest: v1.0.4
+    official: true

@@ -1,0 +1,29 @@
+generated: '2026-06-20'
+method: derived
+format: custom-envelope
+source: openapi/sentinel-dashboard-api.yml
+notes: >-
+  The Sentinel Dashboard OpenAPI declares no HTTP 4xx/5xx responses; every
+  operation returns HTTP 200 with an ApiResult envelope ({code, msg, data}).
+  Errors are signaled in-band via the envelope `code` field rather than HTTP
+  status codes, so this catalog is not RFC 9457. Entries below are derived from
+  the ApiResult schema and the dashboard's documented response convention.
+envelope:
+  schema: openapi/sentinel-dashboard-api.yml#/components/schemas/ApiResult
+  success_code: 200
+  fields:
+    code: integer response code (200 indicates success)
+    msg: human-readable message (populated on error)
+    data: response payload (null on error)
+problems:
+  - code: 200
+    title: Success
+    detail: Request succeeded; result carried in the data field.
+  - code: -1
+    title: Operation failed
+    detail: Generic dashboard failure; inspect msg for details.
+    remediation: Check the msg field and dashboard server logs.
+  - code: 400
+    title: Bad request / invalid rule
+    detail: Submitted rule failed validation (missing or invalid parameters).
+    remediation: Ensure required fields (app, resource, count) are present and valid.

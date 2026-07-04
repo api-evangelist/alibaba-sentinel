@@ -1,0 +1,41 @@
+generated: '2026-06-20'
+method: derived
+status: candidate
+source: openapi/sentinel-dashboard-api.yml
+notes: >-
+  No official or hosted MCP server is published for Sentinel (searched project
+  docs, GitHub org, and the npm @modelcontextprotocol namespace). The tool list
+  below is a candidate mapping derived one-to-one from the Sentinel Dashboard
+  OpenAPI operations. The dashboard is self-hosted, so any MCP server would run
+  locally against http://localhost:8080.
+server:
+  name: alibaba-sentinel-dashboard
+  transport: stdio
+tools:
+  - name: getFlowRules
+    description: Get flow rules for an application
+    source_operation: openapi/sentinel-dashboard-api.yml#getFlowRules
+  - name: createFlowRule
+    description: Create a new flow rule
+    source_operation: openapi/sentinel-dashboard-api.yml#createFlowRule
+  - name: updateFlowRule
+    description: Update an existing flow rule
+    source_operation: openapi/sentinel-dashboard-api.yml#updateFlowRule
+  - name: deleteFlowRule
+    description: Delete a flow rule
+    source_operation: openapi/sentinel-dashboard-api.yml#deleteFlowRule
+  - name: getDegradeRules
+    description: Get degrade (circuit breaker) rules
+    source_operation: openapi/sentinel-dashboard-api.yml#getDegradeRules
+  - name: createDegradeRule
+    description: Create a degrade rule
+    source_operation: openapi/sentinel-dashboard-api.yml#createDegradeRule
+  - name: deleteDegradeRule
+    description: Delete a degrade rule
+    source_operation: openapi/sentinel-dashboard-api.yml#deleteDegradeRule
+  - name: getSystemRules
+    description: Get system protection rules
+    source_operation: openapi/sentinel-dashboard-api.yml#getSystemRules
+  - name: getAuthorityRules
+    description: Get authority rules
+    source_operation: openapi/sentinel-dashboard-api.yml#getAuthorityRules

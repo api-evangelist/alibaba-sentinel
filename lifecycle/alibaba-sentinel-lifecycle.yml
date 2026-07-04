@@ -1,0 +1,24 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/sentinel-dashboard-api.yml
+notes: >-
+  Sentinel is a self-hosted open-source project versioned through GitHub
+  releases; there is no vendor-hosted SLA, status page, or formal deprecation
+  policy. Versioning below is derived from the API URI prefix (/v1) and the
+  project release channel. No operations in the OpenAPI are marked deprecated.
+versioning:
+  scheme: uri-path
+  current: v1
+  release_channel: https://github.com/alibaba/Sentinel/releases
+  latest_stable: 1.8.8
+  latest_prerelease: 2.0.0-alpha
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecation_header: false
+sla:
+  url: null
+  uptime_target: null
+  note: self-hosted; reliability is the operator's responsibility
+status_page: null
+deprecated_operations: []

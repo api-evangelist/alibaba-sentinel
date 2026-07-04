@@ -1,0 +1,31 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Alibaba Sentinel Dashboard API
+  version: 1.0.0
+extends: openapi/sentinel-dashboard-api.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-slug: alibaba-sentinel
+      x-apievangelist-index: https://apis.io/providers/alibaba-sentinel
+      x-api-category: reliability-resilience
+      x-deployment: self-hosted
+  - target: $.info
+    update:
+      x-tags:
+        - flow-control
+        - circuit-breaker
+        - rate-limiting
+        - microservices
+        - open-source
+  - target: $.servers[0]
+    update:
+      x-note: >-
+        Default self-hosted Sentinel Dashboard. Replace host/port with your own
+        deployment; there is no vendor-hosted endpoint.
+  - target: $.paths['/v1/flow/rules'].get
+    update:
+      x-idempotent: true
+  - target: $.paths['/v1/degrade/rules'].get
+    update:
+      x-idempotent: true
