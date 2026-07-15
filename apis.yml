@@ -72,6 +72,8 @@ apis:
       - type: Lifecycle
         url: lifecycle/alibaba-sentinel-lifecycle.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/alibaba-sentinel-agentic-access.yml
   - type: DomainSecurity
     url: security/alibaba-sentinel-domain-security.yml
   - type: Packages
