@@ -13,7 +13,18 @@ description: >-
   project is hosted on GitHub under the Alibaba organization and is widely
   adopted in cloud-native microservice architectures.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/alibaba-sentinel.png
 tags:
   - Alibaba
   - Circuit Breaker
@@ -32,45 +43,102 @@ created: '2026-03-26'
 modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
-  - aid: alibaba-sentinel:sentinel-dashboard-api
-    name: Sentinel Dashboard API
-    description: >-
-      The Sentinel Dashboard API provides a REST interface for the Sentinel
-      dashboard application, which allows real-time monitoring of clients and
-      dynamic configuration of flow control, circuit breaking, and system
-      protection rules. The dashboard supports cluster aggregation of runtime
-      info for up to 500 nodes and enables operators to manage resources and
-      rules without application restarts.
-    humanURL: https://sentinelguard.io/en-us/docs/dashboard.html
-    baseURL: https://localhost:8080
-    tags:
-      - Dashboard
-      - Monitoring
-      - Flow Control
-      - Circuit Breaker
-      - Rate Limiting
-    properties:
-      - type: Documentation
-        url: https://sentinelguard.io/en-us/docs/dashboard.html
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/openapi/sentinel-dashboard-api.yml
-      - type: JSONSchema
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/flow-rule.json
-      - type: JSONSchema
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/degrade-rule.json
-      - type: MCPServer
-        url: mcp/alibaba-sentinel-mcp.yml
-      - type: Overlay
-        url: overlays/alibaba-sentinel-sentinel-dashboard-api-overlay.yaml
-      - type: Conformance
-        url: conformance/alibaba-sentinel-conformance.yml
-      - type: ErrorCatalog
-        url: errors/alibaba-sentinel-problem-types.yml
-      - type: Lifecycle
-        url: lifecycle/alibaba-sentinel-lifecycle.yml
+- aid: alibaba-sentinel:alibaba-sentinel-authority-rules-api
+  name: Alibaba Sentinel Authority Rules API
+  description: The Authority Rules API from Alibaba Sentinel — 1 operation(s) for authority rules.
+  humanURL: https://sentinelguard.io/en-us/docs/dashboard.html
+  baseURL: https://localhost:8080
+  tags:
+  - Authority Rules
+  properties:
+  - type: OpenAPI
+    url: openapi/alibaba-sentinel-authority-rules-api-openapi.yml
+  - type: Documentation
+    url: https://sentinelguard.io/en-us/docs/dashboard.html
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/flow-rule.json
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/degrade-rule.json
+  - type: Conformance
+    url: conformance/alibaba-sentinel-conformance.yml
+  - type: ErrorCatalog
+    url: errors/alibaba-sentinel-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/alibaba-sentinel-lifecycle.yml
+- aid: alibaba-sentinel:alibaba-sentinel-degrade-rules-api
+  name: Alibaba Sentinel Degrade Rules API
+  description: The Degrade Rules API from Alibaba Sentinel — 2 operation(s) for degrade rules.
+  humanURL: https://sentinelguard.io/en-us/docs/dashboard.html
+  baseURL: https://localhost:8080
+  tags:
+  - Degrade Rules
+  properties:
+  - type: OpenAPI
+    url: openapi/alibaba-sentinel-degrade-rules-api-openapi.yml
+  - type: Documentation
+    url: https://sentinelguard.io/en-us/docs/dashboard.html
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/flow-rule.json
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/degrade-rule.json
+  - type: Conformance
+    url: conformance/alibaba-sentinel-conformance.yml
+  - type: ErrorCatalog
+    url: errors/alibaba-sentinel-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/alibaba-sentinel-lifecycle.yml
+- aid: alibaba-sentinel:alibaba-sentinel-flow-rules-api
+  name: Alibaba Sentinel Flow Rules API
+  description: The Flow Rules API from Alibaba Sentinel — 2 operation(s) for flow rules.
+  humanURL: https://sentinelguard.io/en-us/docs/dashboard.html
+  baseURL: https://localhost:8080
+  tags:
+  - Flow Rules
+  properties:
+  - type: OpenAPI
+    url: openapi/alibaba-sentinel-flow-rules-api-openapi.yml
+  - type: Documentation
+    url: https://sentinelguard.io/en-us/docs/dashboard.html
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/flow-rule.json
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/degrade-rule.json
+  - type: Conformance
+    url: conformance/alibaba-sentinel-conformance.yml
+  - type: ErrorCatalog
+    url: errors/alibaba-sentinel-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/alibaba-sentinel-lifecycle.yml
+- aid: alibaba-sentinel:alibaba-sentinel-system-rules-api
+  name: Alibaba Sentinel System Rules API
+  description: The System Rules API from Alibaba Sentinel — 1 operation(s) for system rules.
+  humanURL: https://sentinelguard.io/en-us/docs/dashboard.html
+  baseURL: https://localhost:8080
+  tags:
+  - System Rules
+  properties:
+  - type: OpenAPI
+    url: openapi/alibaba-sentinel-system-rules-api-openapi.yml
+  - type: Documentation
+    url: https://sentinelguard.io/en-us/docs/dashboard.html
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/flow-rule.json
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/json-schema/degrade-rule.json
+  - type: Conformance
+    url: conformance/alibaba-sentinel-conformance.yml
+  - type: ErrorCatalog
+    url: errors/alibaba-sentinel-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/alibaba-sentinel-lifecycle.yml
 common:
   - type: AgenticAccess
     url: agentic-access/alibaba-sentinel-agentic-access.yml
