@@ -1,0 +1,20 @@
+{
+  "provider": "alibaba-sentinel",
+  "sources": [
+    "alibaba-sentinel-authority-rules-api-openapi.yml",
+    "alibaba-sentinel-degrade-rules-api-openapi.yml",
+    "alibaba-sentinel-flow-rules-api-openapi.yml",
+    "alibaba-sentinel-system-rules-api-openapi.yml"
+  ],
+  "outputs": [
+    "alibaba-sentinel-authority-rules-api-openapi.yml",
+    "alibaba-sentinel-degrade-rules-api-openapi.yml",
+    "alibaba-sentinel-flow-rules-api-openapi.yml",
+    "alibaba-sentinel-system-rules-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
