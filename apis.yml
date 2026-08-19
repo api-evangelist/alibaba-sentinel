@@ -41,7 +41,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/apis.yml
 created: '2026-03-26'
 modified: '2026-06-20'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: alibaba-sentinel:alibaba-sentinel-authority-rules-api
   name: Alibaba Sentinel Authority Rules API
