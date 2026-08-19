@@ -1,0 +1,90 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Alibaba Sentinel Dashboard Authority Rules Flow Rules API",
+    "version": "1.8.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Flow Rules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get flow rules for an application",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/v1/flow/rules",
+            "params": [
+              {
+                "name": "app",
+                "value": "",
+                "type": "query",
+                "description": "Application name"
+              }
+            ]
+          },
+          "docs": "Get flow rules for an application"
+        },
+        {
+          "info": {
+            "name": "Create a new flow rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/v1/flow/rule",
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Create a new flow rule"
+        },
+        {
+          "info": {
+            "name": "Update an existing flow rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8080/v1/flow/rule",
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Update an existing flow rule"
+        },
+        {
+          "info": {
+            "name": "Delete a flow rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/v1/flow/rule",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete a flow rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

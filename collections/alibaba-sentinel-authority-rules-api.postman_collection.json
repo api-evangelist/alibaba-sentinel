@@ -1,0 +1,115 @@
+{
+  "item": [
+    {
+      "id": "617e0f86-7d8f-4ddb-82aa-64bf393a653e",
+      "name": "Authority Rules",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f9c7d714-a829-4bc8-9b30-09d3ed981c84",
+          "name": "Get authority rules",
+          "request": {
+            "name": "Get authority rules",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "authority",
+                "rules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "00394c9c-5995-4d49-b133-da73466b964f",
+              "name": "List of authority rules",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "authority",
+                    "rules"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "app",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 2293,\n  \"msg\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8080",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "64eca9e1-8227-42f4-b955-c5c679f97685",
+    "name": "Alibaba Sentinel Dashboard Authority Rules API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Sentinel Dashboard providing management of flow rules, degrade rules, system rules, and authority rules for resources.\n\nContact Support:\n Name: Alibaba Sentinel",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Alibaba Sentinel Dashboard Authority Rules Degrade Rules API",
+    "version": "1.8.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Degrade Rules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get degrade (circuit breaker) rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/v1/degrade/rules",
+            "params": [
+              {
+                "name": "app",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get degrade (circuit breaker) rules"
+        },
+        {
+          "info": {
+            "name": "Create a degrade rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/v1/degrade/rule",
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Create a degrade rule"
+        },
+        {
+          "info": {
+            "name": "Delete a degrade rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/v1/degrade/rule",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete a degrade rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

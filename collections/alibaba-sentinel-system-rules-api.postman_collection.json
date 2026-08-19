@@ -1,0 +1,115 @@
+{
+  "item": [
+    {
+      "id": "63803d79-74a0-432c-88e8-a1346fbb22bf",
+      "name": "System Rules",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "09725b70-f777-4d4f-8e40-b96c06a1c0df",
+          "name": "Get system protection rules",
+          "request": {
+            "name": "Get system protection rules",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "system",
+                "rules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f31122a3-fb03-437c-8c7f-603b3a459cbc",
+              "name": "List of system rules",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "system",
+                    "rules"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "app",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 7328,\n  \"msg\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8080",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "057f4cba-b5b8-4f99-bdda-04d5ec6a4355",
+    "name": "Alibaba Sentinel Dashboard Authority Rules System Rules API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Sentinel Dashboard providing management of flow rules, degrade rules, system rules, and authority rules for resources.\n\nContact Support:\n Name: Alibaba Sentinel",
+      "type": "text/plain"
+    }
+  }
+}

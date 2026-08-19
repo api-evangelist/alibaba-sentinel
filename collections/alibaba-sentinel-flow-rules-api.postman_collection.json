@@ -1,0 +1,646 @@
+{
+  "item": [
+    {
+      "id": "25d17d53-f51f-4908-a646-1d476ba1a874",
+      "name": "Flow Rules",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "74ca37e6-47d4-4a25-a5e3-8092dfad73a1",
+          "name": "Get flow rules for an application",
+          "request": {
+            "name": "Get flow rules for an application",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "flow",
+                "rules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) Application name"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "699459c1-9514-4959-b7f9-d22dc58482b0",
+              "name": "List of flow rules",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "flow",
+                    "rules"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "app",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3165,\n  \"msg\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "588c2ddc-cb1f-4896-af84-103e2239506c",
+          "name": "Create a new flow rule",
+          "request": {
+            "name": "Create a new flow rule",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "flow",
+                "rule"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "resource",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "<number>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limitApp",
+                  "value": "default"
+                },
+                {
+                  "disabled": false,
+                  "key": "grade",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "strategy",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "refResource",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "controlBehavior",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "warmUpPeriodSec",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "maxQueueingTimeMs",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "clusterMode",
+                  "value": "false"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bc16ade4-d9c5-45df-835f-fc9256e05faa",
+              "name": "Flow rule created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "flow",
+                    "rule"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "app",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "resource",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "count",
+                      "value": "<number>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "limitApp",
+                      "value": "default"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "grade",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "strategy",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "refResource",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "controlBehavior",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "warmUpPeriodSec",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "maxQueueingTimeMs",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "clusterMode",
+                      "value": "false"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3165,\n  \"msg\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c00426bc-f320-4628-a9ed-a7441978bf73",
+          "name": "Update an existing flow rule",
+          "request": {
+            "name": "Update an existing flow rule",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "flow",
+                "rule"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "resource",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "<number>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limitApp",
+                  "value": "default"
+                },
+                {
+                  "disabled": false,
+                  "key": "grade",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "strategy",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "refResource",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "controlBehavior",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "warmUpPeriodSec",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "maxQueueingTimeMs",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "clusterMode",
+                  "value": "false"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2c2413c5-2a5c-4ffd-a760-cd4a83450956",
+              "name": "Flow rule updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "flow",
+                    "rule"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "app",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "resource",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "count",
+                      "value": "<number>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "limitApp",
+                      "value": "default"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "grade",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "strategy",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "refResource",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "controlBehavior",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "warmUpPeriodSec",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "maxQueueingTimeMs",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "clusterMode",
+                      "value": "false"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3165,\n  \"msg\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "00654f2c-9a0a-44e3-a2dd-3e8559726165",
+          "name": "Delete a flow rule",
+          "request": {
+            "name": "Delete a flow rule",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "flow",
+                "rule"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a1b3ffc4-634a-4c29-8544-f693c3b476ac",
+              "name": "Flow rule deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "flow",
+                    "rule"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "app",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3165,\n  \"msg\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8080",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ce00fbef-bbc9-449e-8a94-d677bc6f2967",
+    "name": "Alibaba Sentinel Dashboard Authority Rules Flow Rules API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Sentinel Dashboard providing management of flow rules, degrade rules, system rules, and authority rules for resources.\n\nContact Support:\n Name: Alibaba Sentinel",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Alibaba Sentinel Dashboard Authority Rules API",
+    "version": "1.8.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Authority Rules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get authority rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/v1/authority/rules",
+            "params": [
+              {
+                "name": "app",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get authority rules"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

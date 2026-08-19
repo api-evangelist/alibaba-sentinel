@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Alibaba Sentinel Dashboard Authority Rules System Rules API",
+    "version": "1.8.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "System Rules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get system protection rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/v1/system/rules",
+            "params": [
+              {
+                "name": "app",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get system protection rules"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,407 @@
+{
+  "item": [
+    {
+      "id": "5471c848-289e-4b4a-8e99-aa9221704323",
+      "name": "Degrade Rules",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e96dd589-2cf0-4fd1-8b2a-6e7e5379bf80",
+          "name": "Get degrade (circuit breaker) rules",
+          "request": {
+            "name": "Get degrade (circuit breaker) rules",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "degrade",
+                "rules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bea1e5ce-05e2-4895-b836-ea424e6c45cd",
+              "name": "List of degrade rules",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "degrade",
+                    "rules"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "app",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6405,\n  \"msg\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "76ccfab9-695b-48f9-b7a3-10b7ec2e7b5d",
+          "name": "Create a degrade rule",
+          "request": {
+            "name": "Create a degrade rule",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "degrade",
+                "rule"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "resource",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "<number>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "grade",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "timeWindow",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limitApp",
+                  "value": "default"
+                },
+                {
+                  "disabled": false,
+                  "key": "minRequestAmount",
+                  "value": "5"
+                },
+                {
+                  "disabled": false,
+                  "key": "statIntervalMs",
+                  "value": "1000"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2329c8ef-6047-48f7-bd38-61fa390d6aa8",
+              "name": "Degrade rule created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "degrade",
+                    "rule"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "app",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "resource",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "count",
+                      "value": "<number>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "grade",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "timeWindow",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "limitApp",
+                      "value": "default"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "minRequestAmount",
+                      "value": "5"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "statIntervalMs",
+                      "value": "1000"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6405,\n  \"msg\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "45f0fa7b-07d3-4e82-87c9-776a39922f5f",
+          "name": "Delete a degrade rule",
+          "request": {
+            "name": "Delete a degrade rule",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "degrade",
+                "rule"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1b327f42-4381-4d35-9d07-736787f71715",
+              "name": "Degrade rule deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "degrade",
+                    "rule"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "app",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6405,\n  \"msg\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8080",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a15bab51-655c-4464-9dcd-e2db0152440e",
+    "name": "Alibaba Sentinel Dashboard Authority Rules Degrade Rules API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Sentinel Dashboard providing management of flow rules, degrade rules, system rules, and authority rules for resources.\n\nContact Support:\n Name: Alibaba Sentinel",
+      "type": "text/plain"
+    }
+  }
+}
