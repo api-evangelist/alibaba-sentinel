@@ -1,14 +1,13 @@
 generated: '2026-06-20'
 method: searched
 source: https://sentinelguard.io/
-notes: >-
-  The only public base host is the project marketing/docs site sentinelguard.io.
-  The API baseURL (localhost:8080) is a self-hosted dashboard and is not
-  probeable. No /.well-known/ discovery documents are published on
-  sentinelguard.io; all probes returned 404 (expected for a self-hosted
-  open-source dashboard).
+notes: The only public base host is the project marketing/docs site sentinelguard.io. The API baseURL
+  (localhost:8080) is a self-hosted dashboard and is not probeable. No /.well-known/ discovery documents
+  are published on sentinelguard.io; all probes returned 404 (expected for a self-hosted open-source dashboard).
 host: https://sentinelguard.io
-documents:
+hosts:
+- host: https://sentinelguard.io
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -19,3 +18,8 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.

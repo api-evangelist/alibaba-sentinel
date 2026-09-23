@@ -1,10 +1,7 @@
 {
   "provider": "alibaba-sentinel",
   "sources": [
-    "alibaba-sentinel-authority-rules-api-openapi.yml",
-    "alibaba-sentinel-degrade-rules-api-openapi.yml",
-    "alibaba-sentinel-flow-rules-api-openapi.yml",
-    "alibaba-sentinel-system-rules-api-openapi.yml"
+    "_original/sentinel-dashboard-api.yml"
   ],
   "outputs": [
     "alibaba-sentinel-authority-rules-api-openapi.yml",
@@ -15,6 +12,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sentinel-dashboard-api.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "sentinel-dashboard-api.yml: declared missing tag: Authority Rules",
+    "sentinel-dashboard-api.yml: declared missing tag: Degrade Rules",
+    "sentinel-dashboard-api.yml: declared missing tag: Flow Rules",
+    "sentinel-dashboard-api.yml: declared missing tag: System Rules",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "alibaba-sentinel-authority-rules-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "alibaba-sentinel-degrade-rules-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "alibaba-sentinel-flow-rules-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "alibaba-sentinel-system-rules-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

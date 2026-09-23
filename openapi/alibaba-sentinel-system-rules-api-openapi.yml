@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Alibaba Sentinel Dashboard Authority Rules System Rules API
+  title: Alibaba Sentinel Dashboard System Rules API
   description: REST API for the Sentinel Dashboard providing management of flow rules, degrade rules, system rules, and authority rules for resources.
   version: 1.8.0
   contact:
