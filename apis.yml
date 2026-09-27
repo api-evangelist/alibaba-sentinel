@@ -15,14 +15,19 @@ description: >-
 type: Index
 deliveryModel:
   model: library
-  open_source: false
+  license_evidence:
+    not_product:
+    - alibaba/sentinel
+    - alibaba/sentinel-golang
+  open_source: unknown
   commercial: false
   callable_host: false
   label: Library · distributed through package registries, no callable service
   confidence: low
   source:
   - openapi
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: unknown
@@ -45,7 +50,7 @@ tags:
   - Rate Limiting
   - Resilience
   - Traffic Shaping
-  - Open-Source
+  - Open Source
   - Cloud-Native
   - Spring Cloud
 tags_raw:
@@ -60,6 +65,7 @@ tags_raw:
   - Open Source
   - Cloud Native
   - Spring Cloud
+  - Open-Source
 url: >-
   https://raw.githubusercontent.com/api-evangelist/alibaba-sentinel/refs/heads/main/apis.yml
 created: '2026-03-26'
