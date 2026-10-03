@@ -94,17 +94,6 @@ paths:
                 $ref: '#/components/schemas/ApiResult'
 components:
   schemas:
-    ApiResult:
-      type: object
-      properties:
-        code:
-          type: integer
-          description: Response code (200 for success)
-        msg:
-          type: string
-          description: Response message
-        data:
-          description: Response data payload
     FlowRuleRequest:
       type: object
       required:
@@ -153,3 +142,14 @@ components:
         clusterMode:
           type: boolean
           default: false
+    ApiResult:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: Response code (200 for success)
+        msg:
+          type: string
+          description: Response message
+        data:
+          description: Response data payload
