@@ -75,17 +75,6 @@ paths:
                 $ref: '#/components/schemas/ApiResult'
 components:
   schemas:
-    ApiResult:
-      type: object
-      properties:
-        code:
-          type: integer
-          description: Response code (200 for success)
-        msg:
-          type: string
-          description: Response message
-        data:
-          description: Response data payload
     DegradeRuleRequest:
       type: object
       required:
@@ -120,3 +109,14 @@ components:
         statIntervalMs:
           type: integer
           default: 1000
+    ApiResult:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: Response code (200 for success)
+        msg:
+          type: string
+          description: Response message
+        data:
+          description: Response data payload
