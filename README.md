@@ -64,28 +64,128 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Alibaba Sentinel is a powerful open source flow control component enabling reliability, resilience, and monitoring for microservices. Originally developed by Alibaba and used in production for over 10 years, Sentinel provides flow control, traffic shaping, concurrency limiting, circuit breaking, and system adaptive overload protection.
+Alibaba Sentinel is a powerful open source flow control component enabling reliability, resilience, and monitoring for microservices. Originally developed by Alibaba and used in production at Alibaba for over 10 years, Sentinel provides flow control, traffic shaping, concurrency limiting, circuit breaking, and system adaptive overload protection. The project is written primarily in Java with a Go implementation (sentinel-golang) also available. Sentinel integrates with major frameworks including Spring Cloud, Dubbo, gRPC, Apache RocketMQ, and Servlet. It provides a real-time monitoring dashboard for visualizing metrics and configuring rules dynamically. The project is hosted on GitHub under the Alibaba organization and is widely adopted in cloud-native microservice architectures.
 
-Sentinel integrates with major frameworks including Spring Cloud, Dubbo, gRPC, Apache RocketMQ, and Servlet. It provides a real-time monitoring dashboard for visualizing metrics and configuring rules dynamically. The project is written primarily in Java with a Go implementation (sentinel-golang) also available.
+**Areas:** Alibaba · Circuit Breaker · Flow Control · Java · Microservices · Rate Limiting · Resilience · Traffic Shaping · Open Source · Cloud-Native · Spring Cloud
 
-## APIs
+## Alibaba Sentinel on APIs.io
 
-- **[Sentinel Dashboard API](https://sentinelguard.io/en-us/docs/dashboard.html)** - REST interface for real-time monitoring and dynamic rule configuration
+Everything profiled for Alibaba Sentinel is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/alibaba-sentinel/](https://apis.io/providers/alibaba-sentinel/)** — or go straight to one of the APIs or properties below.
 
-## OpenAPI Specs
+### APIs (4)
 
-- `openapi/sentinel-dashboard-api.yml` - Sentinel Dashboard REST API
+- [Alibaba Sentinel Authority Rules API](https://apis.io/apis/alibaba-sentinel/alibaba-sentinel-authority-rules-api/) — The Authority Rules API from Alibaba Sentinel — 1 operation(s) for authority rules.
+- [Alibaba Sentinel Degrade Rules API](https://apis.io/apis/alibaba-sentinel/alibaba-sentinel-degrade-rules-api/) — The Degrade Rules API from Alibaba Sentinel — 2 operation(s) for degrade rules.
+- [Alibaba Sentinel Flow Rules API](https://apis.io/apis/alibaba-sentinel/alibaba-sentinel-flow-rules-api/) — The Flow Rules API from Alibaba Sentinel — 2 operation(s) for flow rules.
+- [Alibaba Sentinel System Rules API](https://apis.io/apis/alibaba-sentinel/alibaba-sentinel-system-rules-api/) — The System Rules API from Alibaba Sentinel — 1 operation(s) for system rules.
 
-## JSON Schemas
+### Published properties
 
-- `json-schema/flow-rule.json` - Schema for flow control rules
-- `json-schema/degrade-rule.json` - Schema for circuit breaker/degrade rules
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Links
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [alibaba-sentinel-dashboard](https://apis.io/servers/alibaba-sentinel/alibaba-sentinel-dashboard/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Alibaba Sentinel Agentic Access](https://apis.io/agentic-access/alibaba-sentinel/alibaba-sentinel-agentic-access/)
+
+#### JSON Schema (2)
+
+The data models the API reads and writes.
+
+- [Alibaba Sentinel Degrade Rule](https://apis.io/schemas/alibaba-sentinel/degrade-rule/)
+- [Alibaba Sentinel Flow Rule](https://apis.io/schemas/alibaba-sentinel/flow-rule/)
+
+#### Collections (4)
+
+Postman and Open Collection request collections.
+
+- [Alibaba Sentinel Dashboard Authority Rules API](https://apis.io/collections/alibaba-sentinel/open-alibaba-sentinel-authority-rules-api/)
+- [Alibaba Sentinel Dashboard Authority Rules Degrade Rules API](https://apis.io/collections/alibaba-sentinel/open-alibaba-sentinel-degrade-rules-api/)
+- [Alibaba Sentinel Dashboard Authority Rules Flow Rules API](https://apis.io/collections/alibaba-sentinel/open-alibaba-sentinel-flow-rules-api/)
+- [Alibaba Sentinel Dashboard Authority Rules System Rules API](https://apis.io/collections/alibaba-sentinel/open-alibaba-sentinel-system-rules-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Alibaba Sentinel Sentinel Dashboard Api Overlay](https://apis.io/overlays/alibaba-sentinel/alibaba-sentinel-sentinel-dashboard-api-overlay/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Alibaba Sentinel — jsonschema rules](https://apis.io/rules/alibaba-sentinel/alibaba-sentinel-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Alibaba Sentinel Domain Security](https://apis.io/security/alibaba-sentinel/alibaba-sentinel-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://sentinelguard.io/)
 - [Documentation](https://sentinelguard.io/en-us/docs/introduction.html)
-- [GitHub - Sentinel (Java)](https://github.com/alibaba/Sentinel)
-- [GitHub - sentinel-golang](https://github.com/alibaba/sentinel-golang)
-- [Wiki](https://github.com/alibaba/Sentinel/wiki)
-- [Releases](https://github.com/alibaba/Sentinel/releases)
+- [Getting started](https://github.com/alibaba/Sentinel/wiki/How-to-Use)
+
+## API Evangelist rating
+
+**Kin Score 23.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 41.0 |
+| Contract governance | 14.4 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 15.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/alibaba-sentinel/](https://apis.io/providers/alibaba-sentinel/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Alibaba Sentinel: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/alibaba-sentinel/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
